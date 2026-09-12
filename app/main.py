@@ -97,7 +97,9 @@ app = FastAPI(
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=list(settings.cors_origins) if settings.cors_origins else ["*"],
+    allow_origins=[
+        "https://srizonchatfrontend.onrender.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
