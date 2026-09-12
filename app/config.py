@@ -21,7 +21,7 @@ class Settings:
     jwt_secret: str = os.getenv("JWT_SECRET", "change-me")
     jwt_algorithm: str = os.getenv("JWT_ALGORITHM", "HS256")
     access_token_expire_minutes: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "10080"))
-    cors_origins: tuple[str, ...] = tuple(_csv("CORS_ORIGINS", "http://localhost:3000,http://localhost:5173"))
+    cors_origins: tuple[str, ...] = tuple(_csv("CORS_ORIGINS", "https://srizonchatfrontend.onrender.com/"))
     public_group_id: str = os.getenv("PUBLIC_GROUP_ID", "public_lounge")
     public_group_name: str = os.getenv("PUBLIC_GROUP_NAME", "Public Lounge")
 
