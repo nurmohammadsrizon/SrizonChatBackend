@@ -1,0 +1,18 @@
+[
+  {
+    "id": "public_lounge",
+    "kind": "public",
+    "name": "Public Lounge",
+    "user_a_id": null,
+    "user_b_id": null,
+    "created_at": "2026-09-12T16:47:22.002001+00:00"
+  },
+  {
+    "id": "dm_3e047ab0-1b9d-470b-9145-ce5c4bce097d_e1fc7bf7-3ac6-430b-845b-fea2297b3a41",
+    "kind": "direct",
+    "name": null,
+    "user_a_id": "3e047ab0-1b9d-470b-9145-ce5c4bce097d",
+    "user_b_id": "e1fc7bf7-3ac6-430b-845b-fea2297b3a41",
+    "created_at": "2026-09-12T16:58:18.685547+00:00"
+  }
+]

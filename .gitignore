@@ -1,0 +1,78 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/*.json.tmp
+firebase-service-account.json
+ create mode 100755 scripts/run.sh
+ create mode 100644 srizon-message-firebase-adminsdk-fbsvc-110bd4664a.json
+(.venv) aizen@aizen-ThinkPad-E570:~/Downloads/srizon-message-server-fcm-json$ git add .
+(.venv) aizen@aizen-ThinkPad-E570:~/Downloads/srizon-message-server-fcm-json$ git push origin main
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (25/25), 13.72 KiB | 1.96 MiB/s, done.
+Total 25 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— Google Cloud Service Account Credentials ——————————
+remote:        locations:
+remote:          - commit: d41d02c686af0de7919e4d4a16adb5c58da5ba65
+remote:            path: srizon-message-firebase-adminsdk-fbsvc-110bd4664a.json:1
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/nurmohammadsrizon/SrizonChatBackend/security/secret-scanning/unblock-secret/3JEirkwha3JUy6iATckJ4VbPayV
+remote:     
+remote: 
+remote: 
+To https://github.com/nurmohammadsrizon/SrizonChatBackend.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/nurmohammadsrizon/SrizonChatBackend.git'
+(.venv) aizen@aizen-ThinkPad-E570:~/Downloads/srizon-message-server-fcm-json$ ^C
+(.venv) aizen@aizen-ThinkPad-E570:~/Downloads/srizon-message-server-fcm-json$ git push -u origin main
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (25/25), 13.72 KiB | 2.29 MiB/s, done.
+Total 25 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— Google Cloud Service Account Credentials ——————————
+remote:        locations:
+remote:          - commit: d41d02c686af0de7919e4d4a16adb5c58da5ba65
+remote:            path: srizon-message-firebase-adminsdk-fbsvc-110bd4664a.json:1
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/nurmohammadsrizon/SrizonChatBackend/security/secret-scanning/unblock-secret/3JEirkwha3JUy6iATckJ4VbPayV
+remote:     
+remote: 
+remote: 
+To https://github.com/nurmohammadsrizon/SrizonChatBackend.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/nurmohammadsrizon/SrizonChatBackend.git'
+srizon-message-firebase-adminsdk-fbsvc-110bd4664a.jsonsrizon-message-firebase-adminsdk-fbsvc-110bd4664a.json
+srizon-message-firebase-adminsdk-fbsvc-110bd4664a.json
