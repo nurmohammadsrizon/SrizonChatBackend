@@ -5,12 +5,13 @@ import hashlib
 import hmac
 import os
 from datetime import datetime, timedelta, timezone
-
 import jwt
-from fastapi import Header, HTTPException, status
-
+from fastapi import Depends, Header, HTTPException, status
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 from .config import settings
-from .json_store import store
+from .db import SessionLocal
+from .models import User
 
 ITERATIONS = 310_000
 
@@ -46,13 +47,21 @@ def decode_access_token(token: str) -> str | None:
         return None
 
 
-async def current_user(authorization: str | None = Header(default=None)) -> dict:
+async def get_session() -> AsyncSession:
+    async with SessionLocal() as session:
+        yield session
+
+
+async def current_user(
+    authorization: str | None = Header(default=None),
+    session: AsyncSession = Depends(get_session),
+) -> User:
     if not authorization or not authorization.startswith("Bearer "):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing bearer token")
     user_id = decode_access_token(authorization[7:])
     if not user_id:
         raise HTTPException(status_code=401, detail="Invalid or expired token")
-    user = await store.find_one("users", lambda u: u.get("id") == user_id and u.get("is_active", True))
+    user = await session.scalar(select(User).where(User.id == user_id, User.is_active.is_(True)))
     if not user:
         raise HTTPException(status_code=401, detail="User not found or inactive")
     return user
